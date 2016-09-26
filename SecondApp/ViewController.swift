@@ -8,18 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
+    @IBOutlet weak var firstButton: UIButton!
 
-    override func viewDidLoad() {
+    @IBOutlet weak var textLabel: UILabel!
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func clickedButton(sender: UIButton)
+    {
+        textLabel.backgroundColor = UIColor.yellowColor()
+    }
 
 }
 
