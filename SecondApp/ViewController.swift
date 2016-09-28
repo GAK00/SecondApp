@@ -11,8 +11,10 @@ import UIKit
 class ViewController: UIViewController
 {
     @IBOutlet weak var firstButton: UIButton!
-
-    @IBOutlet weak var textLabel: UILabel!
+@IBOutlet weak var textLabel: UILabel!
+    
+    @IBOutlet weak var Background: UIView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -27,7 +29,21 @@ class ViewController: UIViewController
 
     @IBAction func clickedButton(sender: UIButton)
     {
-        textLabel.backgroundColor = UIColor.yellowColor()
+       
+        Background.backgroundColor = makeRandColor()
+        
+        
+    }
+    private func makeRandColor() ->UIColor
+    {
+        //creates random values RGB in percetages
+        let red:CGFloat = CGFloat(drand48())
+        let green:CGFloat = CGFloat(drand48())
+        let blue:CGFloat = CGFloat(drand48())
+        let alpha:CGFloat = CGFloat(drand48())
+        //creates and returns color
+        let randomColor:UIColor = UIColor( red:red, green:green, blue:blue, alpha: alpha)
+        return randomColor
     }
 
 }

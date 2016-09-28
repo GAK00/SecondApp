@@ -40,6 +40,8 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="Background" destination="8bC-Xf-vdC" id="Bsg-T6-j59"/>
+                        <outlet property="View" destination="8bC-Xf-vdC" id="P0V-Sl-2kZ"/>
                         <outlet property="firstButton" destination="cNm-uk-7FB" id="68O-vJ-pLG"/>
                         <outlet property="textLabel" destination="RwI-id-0uq" id="3VV-fq-7Jg"/>
                     </connections>
